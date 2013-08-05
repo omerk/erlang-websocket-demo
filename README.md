@@ -13,7 +13,7 @@ using Websockets in your project, you should probably look at
 
 Grab a copy of this demo:
 
-    git clone https://github.com/omerk/erlang-websocket-demo.git
+    git clone https://github.com/omerk/erlang-websocket-demo.git && cd erlang-websocket-demo
 
 Build and start an Erlang shell:
 
