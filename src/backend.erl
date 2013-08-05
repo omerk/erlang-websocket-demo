@@ -53,16 +53,6 @@ loop(Socket) ->
 
 manage_clients(Sockets) ->
 	receive
-		{gpio_set, {Pin, Value}} ->
-			Str = io_lib:format("gpio_set-~p-~p", [Pin, Value]),
-			io:format("gpio_set cmd: ~s~n", [Str]),
-			send_data(Sockets, Str),
-			manage_clients(Sockets);
-		{pwm_set, {Pin, Value}} ->
-			Str = io_lib:format("pwm_set-~p-~p", [Pin, Value]),
-			io:format("pwm_set cmd: ~s~n", [Str]),
-			send_data(Sockets, Str),
-			manage_clients(Sockets);
 		{connect, Socket} ->
 			io:format("Socket connected: ~w~n", [Socket]),
 			manage_clients([Socket | Sockets]);
@@ -149,7 +139,6 @@ decode_payload(Masks, Payload) ->
 
 
 handle_data(Len, Data) ->
-	%%parse_cmd:execute(binary_to_list(Data)),
 	io:format("received: text message with len:~p -  ~p~n", [Len ,Data]),
 
 	binary_to_list(Data).
