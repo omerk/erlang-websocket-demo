@@ -23,6 +23,6 @@ Start backend:
 
     backend:start().
 
-Fire up a browser and open `demo.htm`. Type in some text into the textbox and you should see it
+Fire up a browser and open `demo.htm`. Type some text into the textbox and you should see it
 echoed back by the backend.
 
