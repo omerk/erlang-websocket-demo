@@ -12,12 +12,15 @@ using Websockets in your project, you should probably look at
 # Instructions
 
 Grab a copy of this demo:
+
     git clone https://github.com/omerk/erlang-websocket-demo.git
 
-Build and start an Erlang shell
+Build and start an Erlang shell:
+
     make && make shell
 
-Start backend
+Start backend:
+
     backend:start().
 
 Fire up a browser and open `demo.htm`. Type in some text into the textbox and you should see it
